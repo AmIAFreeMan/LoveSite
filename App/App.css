@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-bg {
+    background: linear-gradient(135deg, #9333EA, #3B82F6);
+}
+
+.heart {
+    color: #ff4081;
+    font-size: 24;
+    animation-name: float;
+    animation-duration: 2;
+    animation-fill-mode: forwards;
+}
+
+@keyframes float {
+    from { 
+        opacity: 1; 
+        transform: translateY(0) scale(1);
+    }
+    to { 
+        opacity: 0; 
+        transform: translateY(-200) scale(0.5);
+    }
+}

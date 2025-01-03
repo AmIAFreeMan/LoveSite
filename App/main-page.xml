@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Love App" flat="true" backgroundColor="#9333EA" color="white" />
+    <GridLayout rows="*" class="gradient-bg">
+        <StackLayout verticalAlignment="center" horizontalAlignment="center">
+            <Button text="I Love You ❤️" 
+                    tap="{{ createHeart }}" 
+                    class="text-xl font-bold text-white bg-pink-500 rounded-full px-8 py-4" />
+            <GridLayout id="heartContainer" row="0" col="0">
+                <Label text="{{ hearts }}" textWrap="true" class="text-center" />
+            </GridLayout>
+        </StackLayout>
+    </GridLayout>
+</Page>
