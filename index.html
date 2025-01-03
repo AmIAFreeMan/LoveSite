@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Hearts</title>
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-purple-600 to-blue-500 flex items-center justify-center">
+  <button id="loveButton" 
+    class="px-8 py-4 bg-pink-500 hover:bg-pink-600 text-white font-bold text-xl rounded-full shadow-lg transform transition hover:scale-105 active:scale-95">
+    I Love You ❤️
+  </button>
+  <script type="module">
+    import { createHeart } from './src/js/heart.js';
+
+    const button = document.getElementById('loveButton');
+    
+    button.addEventListener('click', (e) => {
+      for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+          createHeart(
+            e.clientX + Math.random() * 40 - 20,
+            e.clientY + Math.random() * 40 - 20
+          );
+        }, i * 50);
+      }
+    });
+  </script>
+</body>
+</html>
